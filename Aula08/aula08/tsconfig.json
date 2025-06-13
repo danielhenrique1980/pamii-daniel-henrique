@@ -1,0 +1,21 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,                         // Ativa verificações rigorosas
+    "skipLibCheck": true,                   // Ignora a verificação de tipos das bibliotecas
+    "esModuleInterop": true,                // Para melhor compatibilidade com módulos ES
+    "resolveJsonModule": true,              // Permite importar arquivos JSON
+    "paths": {
+      "@/*": [
+        "./*"                                // Define o alias @ para apontar para a raiz
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",                              // Incluir todos os arquivos TypeScript na raiz
+    "**/*.tsx",                             // Incluir todos os arquivos TypeScript JSX
+    ".expo/types/**/*.ts",                  // Tipagens automáticas do Expo
+    "expo-env.d.ts"                         // Tipagens específicas do Expo
+  ]
+}
+
